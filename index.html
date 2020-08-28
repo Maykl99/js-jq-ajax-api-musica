@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>ex-dischi-musicali</title>
+       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <!-- INCOMPLETO !!!!!!!!!!!!111-->
+        <header>
+            <div class="container">
+                <!-- <img src="https://bitbucket.org/booleancareers/ex-dischi-musicali-layout/raw/59192c7eaad7f791ad99377be2f2ee895b68974e/logo.png" alt="logo" /> -->
+            </div>
+        </header>
+
+        <select>
+            <option value="All">ALL</option>
+            <option value="Rock">Rock</option>
+            <option value="Metal">Metal</option>
+            <option value="Jazz">Jazz</option>
+            <option value="Pop">Pop</option>
+        </select>
+
+         
+        <div class="cds-container container">
+            
+        </div>
+        
+
+        <script id="entry-template" type="text/x-handlebars-template">
+            
+                <div class="cd">
+                    <img src={{poster}} alt="img">
+                    <h3>"{{title}}"</h3> 
+                    <span class="author">{{author}}</span>
+                    <span class="year">{{year}}</span>
+                </div>
+            
+        </script>
+
+        
+
+        <script src="js/script.js" charset="utf-8"></script>
+    </body>
+</html>
