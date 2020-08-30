@@ -1,6 +1,6 @@
 //Attraverso una chiamata ajax all’Api di boolean avremo a disposizione una decina di dischi musicali.
 $(document).ready(function(){
-$.ajax({
+  $.ajax({
     type: "GET",
     url: "https://flynn.boolean.careers/exercises/api/array/music",
     success: function (response) {
@@ -24,26 +24,25 @@ $.ajax({
               break;
             default: 
               $('.cd').addClass('active');
-          }
+          };
         });
 
     },
     error: function(errore){
       alert('errore! ' + errore);
     }
-    
-    
-}); 
+      
+  }); 
 });
 
 function leggiDati(operazione){ //utilizzo Handlebars
-    // oggetto da clonare
-    var source = document.getElementById("entry-template").innerHTML;
-    var template = Handlebars.compile(source);
+  // oggetto da clonare
+  var source = document.getElementById("entry-template").innerHTML;
+  var template = Handlebars.compile(source);
 
-    // ciclo con iterazione per ogni proprietà dell'oggetto e stampa a video
-    for(var i=0; i<operazione.response.length; i++){
-        var context= template(operazione.response[i]);
-        document.querySelector('.cds-container').innerHTML+=context;
-      }
-}
+  // ciclo con iterazione per ogni proprietà dell'oggetto e stampa a video
+  for(var i=0; i<operazione.response.length; i++){
+      var context= template(operazione.response[i]);
+      document.querySelector('.cds-container').innerHTML+=context;
+    };
+};
