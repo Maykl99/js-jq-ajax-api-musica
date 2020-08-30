@@ -3,48 +3,42 @@
     <head>
         <meta charset="utf-8">
         <title>ex-dischi-musicali</title>
-       
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-
-        <!-- INCOMPLETO !!!!!!!!!!!!111-->
         <header>
             <div class="container">
-                <!-- <img src="https://bitbucket.org/booleancareers/ex-dischi-musicali-layout/raw/59192c7eaad7f791ad99377be2f2ee895b68974e/logo.png" alt="logo" /> -->
+                 <img src="https://bitbucket.org/booleancareers/ex-dischi-musicali-layout/raw/59192c7eaad7f791ad99377be2f2ee895b68974e/logo.png" alt="logo" /> 
             </div>
         </header>
 
-        <select>
-            <option value="All">ALL</option>
-            <option value="Rock">Rock</option>
-            <option value="Metal">Metal</option>
-            <option value="Jazz">Jazz</option>
-            <option value="Pop">Pop</option>
-        </select>
-
-         
+            <ul> <!-- gestore dell'evento onclick -->
+                <li class="active">ALL</li>
+                <li>Rock</li>
+                <li>Metal</li>
+                <li>Jazz</li>
+                <li>Pop</li>
+            </ul>
+        
         <div class="cds-container container">
-            
+            <!-- contenitore oggetti clonati -->
         </div>
         
-
         <script id="entry-template" type="text/x-handlebars-template">
-            
-                <div class="cd">
+             <!-- contenuto da clonare -->
+                <div class="cd {{genre}} active">
                     <img src={{poster}} alt="img">
                     <h3>"{{title}}"</h3> 
                     <span class="author">{{author}}</span>
                     <span class="year">{{year}}</span>
+                    <span class="genre">{{genre}}</span>
                 </div>
-            
         </script>
 
         
-
         <script src="js/script.js" charset="utf-8"></script>
     </body>
 </html>
